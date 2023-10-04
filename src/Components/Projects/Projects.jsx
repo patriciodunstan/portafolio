@@ -7,7 +7,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    const accessToken = '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';
+    const accessToken = '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';
     const getRepos = async () => {
       try {
         const response = await axios.get(

@@ -7,12 +7,16 @@ export const metadata = {
   description: 'portafolio'
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, className = '' }) {
   return (
     <html lang="en">
-      <body>
+      <body className="pt-0">
         <NavBar />
-        <section>{children}</section>
+        <section
+          className={`w-full h-full inline-block z-0 bg-white p-32 pt-1 px-2 ${className}`}
+        >
+          {children}
+        </section>
         <Footer />
       </body>
     </html>
