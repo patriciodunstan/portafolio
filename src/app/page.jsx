@@ -3,6 +3,7 @@ import profilePic from '../../public/mokker.png';
 import { AnimatedText } from '@/Components/AnimatedText/AnimatedText';
 import Link from 'next/link';
 import { LinkArrow } from '@/Components/Icons/Icons';
+import HireMe from '@/Components/HireMe/HireMe';
 export default function Home() {
   return (
     <>
@@ -39,6 +40,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <HireMe />
       </main>
     </>
   );
