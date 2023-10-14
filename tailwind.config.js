@@ -13,9 +13,13 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
       animation: {
-        'spin-slow' : 'spin 8s linear infinite',
+        'spin-slow': 'spin 8s linear infinite'
+      },
+      backgroundImage: {
+        circularLight:
+          'repeating-radial-gradient(rgba(0,0,0,0.4)2px,#FFFFFF80 5px,#FFFFFF80 100px);'
       }
-    },
+    }
   },
   plugins: []
 };

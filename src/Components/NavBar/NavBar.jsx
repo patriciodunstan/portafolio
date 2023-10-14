@@ -26,12 +26,18 @@ const CustomLink = ({ href, title, className = '' }) => {
 
 export function NavBar() {
   return (
-    <header className="py-8 px-32 w-full font-medium flex items-center justify-between">
-      <nav className="">
-        <CustomLink href="/" title="Home" className="mr-4 text-black" />
+    <header className="py-8 px-24 w-full font-medium flex items-center justify-between">
+      <nav className="flex flex-row">
+        <CustomLink href="/" title="Inicio" className="mr-4 text-black" />
 
         <CustomLink
-          href="/Projects"
+          href="/view/About"
+          title="Acerca de Mi"
+          className="mx-4 text-black"
+        />
+
+        <CustomLink
+          href="/view/Projects"
           title="Proyectos"
           className="mx-4 text-black"
         />
