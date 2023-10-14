@@ -1,5 +1,8 @@
 # Portafolio Personal 
 
+## NOTA
+Proyecto esta en fase de construcción por ende falta finalizar sección de proyectos y responsive.
+
 ## Tecnologias 
 
 - NextJs (SSR) 
