@@ -1,10 +1,31 @@
 import { motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
+import LiIcon from '../LiIcon/LiIcon';
 
+/**
+ * Renders details of a position at a company.
+ *
+ * @param {Object} position - The position object containing information about the position.
+ * @param {string} position.position - The position title.
+ * @param {string} position.companyLink - The link to the company website.
+ * @param {string} position.company - The name of the company.
+ * @param {string} position.time - The duration of the position.
+ * @param {string} position.work - The description of the work done.
+ * @return {JSX.Element} - The rendered details component.
+ */
 const Details = ({ position, companyLink, company, time, work }) => {
+  const ref = useRef(null);
   return (
-    <li className="my-8 first:mt-0 last:mb-o w-[60%] mx-auto flex flex-col items-center justify-between">
-      <div>
+    <li
+      ref={ref}
+      className="my-8 first:mt-0 last:mb-o w-[60%] mx-auto flex flex-col items-center justify-between"
+    >
+      <LiIcon reference={ref} />
+      <motion.div
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        trantion={{ duration: 0.5, type: 'spring' }}
+      >
         <h3 className="capitalize font-bold text-2xl">
           {position}&nbsp;
           <a
@@ -17,7 +38,7 @@ const Details = ({ position, companyLink, company, time, work }) => {
         </h3>
         <span className="capitalize font-medium text-gray-800">{time}</span>
         <p className="font-medium w-full">{work}</p>
-      </div>
+      </motion.div>
     </li>
   );
 };
@@ -34,12 +55,12 @@ const Experience = () => {
       <h2 className="font-bold text-8xl mb-32 w-full text-center">
         Experiencia
       </h2>
-      <motion.div
-        style={{ scaleY: scrollYProgress }}
-        ref={ref}
-        className="w-[75%] mx-auto relative"
-      >
-        <motion.div className="absolute left-8 top-0 w-[4px] h-full bg-black origin-top" />
+      <div ref={ref} className="w-[75%] mx-auto relative">
+        <motion.div
+          className="absolute left-9 top-0 w-[4px] h-full bg-black origin-top"
+          style={{ scaleY: scrollYProgress }}
+        />
+
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
             position="Desarrollador Front-End"
@@ -48,8 +69,23 @@ const Experience = () => {
             time="jun. 2023- sept. 2023"
             work="Encargado de la optimización y actualización de la pagina web devsafio.com, empleando tecnologías como React-Next.js y Tailwind CSS. Experiencia en herramientas como Jira, Git y Figma para una gestión eficaz del proyecto."
           />
+
+          <Details
+            position="Desarrollador Front-End"
+            companyLink="https://desafiolatam.com/incubadora/"
+            company="Desafio Latam"
+            time="jun. 2023- sept. 2023"
+            work="Encargado de la optimización y actualización de la pagina web devsafio.com, empleando tecnologías como React-Next.js y Tailwind CSS. Experiencia en herramientas como Jira, Git y Figma para una gestión eficaz del proyecto."
+          />
+          <Details
+            position="Desarrollador Front-End"
+            companyLink="https://desafiolatam.com/incubadora/"
+            company="Desafio Latam"
+            time="jun. 2023- sept. 2023"
+            work="Encargado de la optimización y actualización de la pagina web devsafio.com, empleando tecnologías como React-Next.js y Tailwind CSS. Experiencia en herramientas como Jira, Git y Figma para una gestión eficaz del proyecto."
+          />
         </ul>
-      </motion.div>
+      </div>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { useSpring, useMotionValue, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Skills from '../../../Components/Skills/Skills';
 import Experience from '../../../Components/Experience/Experience';
+import Education from '../../../Components/Education/Education';
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -89,6 +90,7 @@ const About = () => {
       </div>
       <Skills />
       <Experience />
+      <Education/>
     </>
   );
 };
