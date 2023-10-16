@@ -41,12 +41,6 @@ export function NavBar() {
           title="Proyectos"
           className="mx-4 text-black"
         />
-
-        <CustomLink
-          href="/Contact"
-          title="Contacto"
-          className="ml-4 text-black"
-        />
       </nav>
 
       <nav className="flex items-center justify-center flex-wrap">

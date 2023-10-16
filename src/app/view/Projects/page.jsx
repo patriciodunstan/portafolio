@@ -1,8 +1,121 @@
+import { AnimatedText } from '@/Components/AnimatedText/AnimatedText';
+import Link from 'next/link';
+import Image from 'next/image';
+import { GithubIcon } from '@/Components/Icons/Icons';
+import c10form from '../../../../public/c10form.png';
+import apicrud from '../../../../public/apicrud.png';
 
+const FeaturedProject = ({ type, title, summary, img, link, github }) => {
+  return (
+    <article
+      className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid 
+    border-black bg-white shadow-2xl p-12"
+    >
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-black rounded-br-3xl" />
+      <Link
+        href={link}
+        target="_blank"
+        className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+      >
+        <Image src={img} alt={title} className="w-full h-auto" />
+      </Link>
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
+        <span className="text-pink-500 font-medium text-xl">{type}</span>
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+        </Link>
+        <p className="my-2 font-medium text-black">{summary}</p>
 
+        <div className="mt-2 flex items-center">
+          <Link href={github} target="_blank" className="w-10">
+            <GithubIcon />
+          </Link>
+          <Link
+            href={link}
+            target="_blank"
+            className="ml-4 rounded-lg bg-black text-white p-2 px-6 text-lg font-semibold"
+          >
+            Visita Proyecto
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
+
+const Project = ({ title, type, img, link, github }) => {
+  return (
+    <article
+      className="w-full flex flex-col items-center justify-between rounded-3xl border border-solid 
+    border-black bg-white p-6 relative"
+    >
+      <Link
+        href={link}
+        target="_blank"
+        className="w-full cursor-pointer overflow-hidden rounded-lg"
+      >
+        <Image src={img} alt={title} className="w-full h-auto" />
+      </Link>
+      <div className="w-full flex flex-col items-start justify-between mt-4">
+        <span className="text-pink-500 font-medium text-xl">{type}</span>
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <h2 className="my-2 w-full text-left text-3xl font-bold">{title}</h2>
+        </Link>
+        <div className="w-full mt-2 flex items-center justify-between">
+          <Link
+            href={link}
+            target="_blank"
+            className="text-lg font-semibold underline"
+          >
+            Visita
+          </Link>
+          <Link href={github} target="_blank" className="w-8">
+            <GithubIcon />
+            {''}
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
 function Projects() {
   return (
-    <div>Projects</div>
-  )
+    <>
+      <div className="w-full mb-16 flex flex-col items-center justify-center">
+        <div className="pt-16">
+          <AnimatedText text="Cada Día Mejor" className="mb-16" />
+          <div className="grid grid-cols-12 gap-24 gap-y-32">
+            <div className="col-span-12">
+              <FeaturedProject
+                title="Pagina Web Devsafio"
+                img={c10form}
+                summary="Actualización y mejora para la pagina de cliente Devsafio, trabajo realizado en celula 10 de incubadora Desafio Latam"
+                link="https://c10-frontend.vercel.app/"
+                github="https://github.com/patriciodunstan/c10-frontend"
+                type="proyecto de equipo"
+              />
+            </div>
+            <div className="col-span-6">
+              <Project
+                title="NodeJs Api Crud"
+                img={apicrud}
+                link="https://github.com/patriciodunstan/node-CRUD-API"
+                github="https://github.com/patriciodunstan/node-CRUD-API"
+                type="proyecto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
-export default Projects
+export default Projects;

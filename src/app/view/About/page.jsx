@@ -34,7 +34,7 @@ const About = () => {
   return (
     <>
       <div className="flex items-center justify-center flex-col w-full">
-        <AnimatedText text="Mejor Cada Día" className="pt-16 mb-16" />
+        <AnimatedText text="Cada Día Mejor" className="pt-16 mb-16" />
       </div>
       <div className="grid w-full grid-cols-8 gap-16">
         <div className="col-span-3 flex flex-col items-start justify-start">
@@ -65,7 +65,7 @@ const About = () => {
           className="col-span-3 relative rounded-2xl border-2 border-solid border-black
         bg-white p-8"
         >
-          <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-gray-900" />
+          <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black" />
           <Image
             src={profilebiografia}
             alt="profilebiografia"
@@ -90,7 +90,7 @@ const About = () => {
       </div>
       <Skills />
       <Experience />
-      <Education/>
+      <Education />
     </>
   );
 };

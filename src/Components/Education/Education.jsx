@@ -45,9 +45,7 @@ const Education = () => {
 
   return (
     <div className="my-65 mt-4">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center">
-        Experiencia
-      </h2>
+      <h2 className="font-bold text-8xl mb-32 w-full text-center">Educación</h2>
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           className="absolute left-9 top-0 w-[4px] h-full bg-black origin-top"
