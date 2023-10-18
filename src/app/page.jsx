@@ -7,7 +7,7 @@ import HireMe from '@/Components/HireMe/HireMe';
 export default function Home() {
   return (
     <>
-      <main className="flex items-center text-black w-full min-h-screen">
+      <main className="flex items-center text-black w-full min-h-screen dark:text-white">
         <div className="flex items-center justify-between w-full">
           <Image src={profilePic} alt="hero" className="w-1/3 h-auto" />
           <div className="w-2/3 flex flex-col items-center self-center pl-4">
@@ -26,6 +26,7 @@ export default function Home() {
                 target={'_blank'}
                 className="flex items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold 
                 hover:bg-white hover:text-black border border-solid border-transparent hover:border-black
+                dark:bg-white dark:text-black hover:dark:bg-black hover:dark:text-white hover:dark:border-white
                 "
               >
                 Curriculum <LinkArrow className={'w-6 ml-1'} />
@@ -33,7 +34,7 @@ export default function Home() {
               <Link
                 href="mailto:patricio.dunstan@gmail.com"
                 target={'_blank'}
-                className="ml-4 text-lg font-medium capitalize text-black underline"
+                className="ml-4 text-lg font-medium capitalize text-black underline dark:text-white"
               >
                 Email
               </Link>
