@@ -39,7 +39,7 @@ const About = () => {
         </div>
         <div className="grid w-full grid-cols-8 gap-16">
           <div className="col-span-3 flex flex-col items-start justify-start">
-            <h2 className="mb-4 text-lg font-bold uppercase text-gray-700">
+            <h2 className="mb-4 text-lg font-bold uppercase text-gray-700 dark:text-white">
               Biografia
             </h2>
             <p className="font-medium">
@@ -64,7 +64,7 @@ const About = () => {
           </div>
           <div
             className="col-span-3 relative rounded-2xl border-2 border-solid border-black
-        bg-white p-8"
+        bg-white p-8 dark:bg-black dark:border-white"
           >
             <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black" />
             <Image
