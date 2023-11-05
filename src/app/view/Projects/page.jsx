@@ -119,7 +119,7 @@ const Project = ({ title, type, img, link, github }) => {
 function Projects() {
   return (
     <>
-      <TransitionEffect/>
+      <TransitionEffect />
       <div className="w-full mb-16 flex flex-col items-center justify-center dark:text-white">
         <div className="pt-16">
           <AnimatedText

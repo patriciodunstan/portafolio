@@ -7,7 +7,7 @@ import { useEffect, useRef } from 'react';
 import Skills from '../../../Components/Skills/Skills';
 import Experience from '../../../Components/Experience/Experience';
 import Education from '../../../Components/Education/Education';
-import TransitionEffect from '@/components/TransitionEffect/TransitionEffect'
+import TransitionEffect from '@/Components/TransitionEffect/TransitionEffect'
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
