@@ -41,10 +41,10 @@ export default function RootLayout({ children, className = '' }) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>
-      <body className={`pt-0 ${theme === 'dark' ? 'dark:bg-black' : ''}`}>
+      <body className="pt-0 dark:bg-black">
         <NavBar />
         <section
-          className={`w-full h-full inline-block z-0 bg-white p-32 pt-1 px-2 dark:bg-black${className}`}
+          className={`w-full h-full inline-block z-0 bg-white p-32 pt-1 px-2 dark:bg-black xl:p-24 lg:p-16 md:p-12 sm:p-8 ${className}`}
         >
           {children}
         </section>
