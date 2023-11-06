@@ -1,34 +1,34 @@
-'use client';
-import { motion } from 'framer-motion';
+"use client"
+import { motion } from "framer-motion"
 
 const quote = {
   initial: {
-    opacity: 1
+    opacity: 1,
   },
   animate: {
     opacity: 1,
     transition: {
       delaty: 0.5,
-      staggerChildren: 0.08
-    }
-  }
-};
+      staggerChildren: 0.08,
+    },
+  },
+}
 
 const singleWord = {
   initial: {
     opacity: 0,
-    y: 50
+    y: 50,
   },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1
-    }
-  }
-};
+      duration: 1,
+    },
+  },
+}
 
-export const AnimatedText = ({ text, className = '' }) => {
+export const AnimatedText = ({ text, className = "" }) => {
   return (
     <div className="w-full max-auto py-2 flex items-center text-center overflow-hidden ">
       <motion.h1
@@ -37,9 +37,9 @@ export const AnimatedText = ({ text, className = '' }) => {
         initial="initial"
         animate="animate"
       >
-        {text.split('').map((word, index) => (
+        {text.split("").map((word, index) => (
           <motion.span
-            key={word + '-' + index}
+            key={word + "-" + index}
             className="inline-block"
             variants={singleWord}
           >
@@ -48,5 +48,5 @@ export const AnimatedText = ({ text, className = '' }) => {
         ))}
       </motion.h1>
     </div>
-  );
-};
+  )
+}

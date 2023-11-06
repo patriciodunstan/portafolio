@@ -1,40 +1,17 @@
-'use client';
-import { AnimatedText } from '../../../Components/AnimatedText/AnimatedText';
-import profilebiografia from '../../../../public/profilebiografia2.png';
-import Image from 'next/image';
-import { useSpring, useMotionValue, useInView } from 'framer-motion';
-import { useEffect, useRef } from 'react';
-import Skills from '../../../Components/Skills/Skills';
-import Experience from '../../../Components/Experience/Experience';
-import Education from '../../../Components/Education/Education';
-import TransitionEffect from '@/Components/TransitionEffect/TransitionEffect'
-
-const AnimatedNumbers = ({ value }) => {
-  const ref = useRef(null);
-
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [isInView, value, motionValue]);
-
-  useEffect(() => {
-    springValue.on('change', (latest) => {
-      if (ref.current && latest.toFixed(0) <= value) {
-        ref.current.textContent = latest.toFixed(0);
-      }
-    });
-  }, [springValue, value]);
-};
+/* eslint-disable no-unused-vars */
+"use client"
+import { AnimatedText } from "../../../Components/AnimatedText/AnimatedText"
+import profilebiografia from "../../../../public/profilebiografia2.png"
+import Image from "next/image"
+import Skills from "../../../Components/Skills/Skills"
+import Experience from "../../../Components/Experience/Experience"
+import Education from "../../../Components/Education/Education"
+import TransitionEffect from "@/Components/TransitionEffect/TransitionEffect"
 
 const About = () => {
   return (
     <>
-    <TransitionEffect/>
+      <TransitionEffect />
       <div className="flex items-center justify-center flex-col w-full dark:text-white">
         <div className="pt-16">
           <AnimatedText
@@ -105,6 +82,6 @@ const About = () => {
         <Education />
       </div>
     </>
-  );
-};
-export default About;
+  )
+}
+export default About

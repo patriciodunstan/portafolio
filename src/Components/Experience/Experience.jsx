@@ -1,6 +1,6 @@
-import { motion, useScroll } from 'framer-motion';
-import { useRef } from 'react';
-import LiIcon from '../LiIcon/LiIcon';
+import { motion, useScroll } from "framer-motion"
+import { useRef } from "react"
+import LiIcon from "../LiIcon/LiIcon"
 
 /**
  * Renders details of a position at a company.
@@ -14,7 +14,7 @@ import LiIcon from '../LiIcon/LiIcon';
  * @return {JSX.Element} - The rendered details component.
  */
 const Details = ({ position, companyLink, company, time, work }) => {
-  const ref = useRef(null);
+  const ref = useRef(null)
   return (
     <li
       ref={ref}
@@ -24,7 +24,7 @@ const Details = ({ position, companyLink, company, time, work }) => {
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
-        trantion={{ duration: 0.5, type: 'spring' }}
+        trantion={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
           {position}&nbsp;
@@ -42,15 +42,15 @@ const Details = ({ position, companyLink, company, time, work }) => {
         <p className="font-medium w-full md:text-sm">{work}</p>
       </motion.div>
     </li>
-  );
-};
+  )
+}
 
 const Experience = () => {
-  const ref = useRef(null);
+  const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'center start']
-  });
+    offset: ["start end", "center start"],
+  })
 
   return (
     <div className="my-65 mt-4">
@@ -90,6 +90,6 @@ const Experience = () => {
         </ul>
       </div>
     </div>
-  );
-};
-export default Experience;
+  )
+}
+export default Experience

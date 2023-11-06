@@ -1,10 +1,10 @@
-import { AnimatedText } from '@/Components/AnimatedText/AnimatedText';
-import Link from 'next/link';
-import Image from 'next/image';
-import { GithubIcon } from '@/Components/Icons/Icons';
-import c10form from '../../../../public/c10form.png';
-import apicrud from '../../../../public/apicrud.png';
-import TransitionEffect from '@/Components/TransitionEffect/TransitionEffect'
+import { AnimatedText } from "@/Components/AnimatedText/AnimatedText"
+import Link from "next/link"
+import Image from "next/image"
+import { GithubIcon } from "@/Components/Icons/Icons"
+import c10form from "../../../../public/c10form.png"
+import apicrud from "../../../../public/apicrud.png"
+import TransitionEffect from "@/Components/TransitionEffect/TransitionEffect"
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -63,8 +63,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         </div>
       </div>
     </article>
-  );
-};
+  )
+}
 
 const Project = ({ title, type, img, link, github }) => {
   return (
@@ -109,13 +109,13 @@ const Project = ({ title, type, img, link, github }) => {
           </Link>
           <Link href={github} target="_blank" className="w-8 md:w-6">
             <GithubIcon />
-            {''}
+            {""}
           </Link>
         </div>
       </div>
     </article>
-  );
-};
+  )
+}
 function Projects() {
   return (
     <>
@@ -150,6 +150,6 @@ function Projects() {
         </div>
       </div>
     </>
-  );
+  )
 }
-export default Projects;
+export default Projects

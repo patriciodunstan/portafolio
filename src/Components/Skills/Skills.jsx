@@ -1,6 +1,6 @@
-'use client';
+"use client"
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion"
 
 const Skill = ({ name, x, y }) => {
   return (
@@ -10,13 +10,13 @@ const Skill = ({ name, x, y }) => {
           xs:dark:bg-transparent xs:text-black xs:dark:text-white xs:font-bold"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
-      animate={{ x: x, y: y, transition: { duration: 1.5 } }}
+      animate={{ x, y, transition: { duration: 1.5 } }}
       viewport={{ once: true }}
     >
       {name}
     </motion.div>
-  );
-};
+  )
+}
 
 function Skills() {
   return (
@@ -48,6 +48,6 @@ function Skills() {
         <Skill name="Tailwind CSS" x="26vw" y="18vw" />
       </div>
     </>
-  );
+  )
 }
-export default Skills;
+export default Skills

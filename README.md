@@ -1,15 +1,16 @@
-# Portafolio Personal 
+# Portafolio Personal
 
 ## NOTA
+
 Proyecto esta en fase de construcción por ende falta finalizar sección de proyectos y responsive.
 
-## Tecnologias 
+## Tecnologias
 
-- NextJs (SSR) 
-- TailwindCSS 
-- Frame-Motion 
+- NextJs (SSR)
+- TailwindCSS
+- Frame-Motion
 - Eslint
-- Git 
+- Git
 
 ## Clonar, instalar depedencias e inicializar proyecto
 
@@ -20,11 +21,9 @@ Proyecto esta en fase de construcción por ende falta finalizar sección de proy
 ~~ npm install ~~
 
 3. Ejecución Para realizar la ejecución del proyecto y visualizar ejecutaremos en terminal el comando que corresponda según su administrador de paquetes:
+
 - npm run dev
 - yarn dev
-- pnpm dev 
+- pnpm dev
 
-4.Abrir la pagina y realizar visualización: Para abrir la pagina debes hacer click en el siguiente link (primero debes inicar el proyecto para visualizar la pagina): http://localhost:3000
-
-
-
+  4.Abrir la pagina y realizar visualización: Para abrir la pagina debes hacer click en el siguiente link (primero debes inicar el proyecto para visualizar la pagina): http://localhost:3000

@@ -1,14 +1,15 @@
-import Image from 'next/image';
-import profilePic from '../../public/mokker.png';
-import { AnimatedText } from '@/Components/AnimatedText/AnimatedText';
-import Link from 'next/link';
-import { LinkArrow } from '@/Components/Icons/Icons';
-import HireMe from '@/Components/HireMe/HireMe';
-import TransitionEffect from '@/Components/TransitionEffect/TransitionEffect'
+import Image from "next/image"
+import profilePic from "../../public/mokker.png"
+import { AnimatedText } from "@/Components/AnimatedText/AnimatedText"
+import Link from "next/link"
+import { LinkArrow } from "@/Components/Icons/Icons"
+import HireMe from "@/Components/HireMe/HireMe"
+import TransitionEffect from "@/Components/TransitionEffect/TransitionEffect"
+
 export default function Home() {
   return (
     <>
-    <TransitionEffect/>
+      <TransitionEffect />
       <main className="flex items-center text-black w-full min-h-screen dark:text-white">
         <div className="pt-0 md:p-16 sm:p-8">
           <div className="flex items-center justify-between w-full lg:flex-col">
@@ -33,18 +34,18 @@ export default function Home() {
               <div className="flex items-center sefl-start mt-2 lg:self-center">
                 <Link
                   href="https://drive.google.com/drive/folders/1eTL3MhiVa6p8O_lgtJgyrVz-jZ1Es_fs?usp=drive_link"
-                  target={'_blank'}
+                  target={"_blank"}
                   className="flex items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold 
                 hover:bg-white hover:text-black border border-solid border-transparent hover:border-black
                 dark:bg-white dark:text-black hover:dark:bg-black hover:dark:text-white hover:dark:border-white
                 md:p-2 md:px-4 md:text-base
                 "
                 >
-                  Curriculum <LinkArrow className={'w-6 ml-1'} />
+                  Curriculum <LinkArrow className={"w-6 ml-1"} />
                 </Link>
                 <Link
                   href="mailto:patricio.dunstan@gmail.com"
-                  target={'_blank'}
+                  target={"_blank"}
                   className="ml-4 text-lg font-medium capitalize text-black underline dark:text-white m:text-base"
                 >
                   Email
@@ -56,5 +57,5 @@ export default function Home() {
         </div>
       </main>
     </>
-  );
+  )
 }

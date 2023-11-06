@@ -1,39 +1,37 @@
-'use client';
-import './globals.css';
-import { NavBar } from '@/Components/NavBar/NavBar';
-import { Footer } from '@/Components/Footer/Footer';
-import { useEffect, useState } from 'react';
-import { metadata } from '@/util/metadata';
+"use client"
+import "./globals.css"
+import { NavBar } from "@/Components/NavBar/NavBar"
+import { Footer } from "@/Components/Footer/Footer"
+import { useEffect, useState } from "react"
+import { metadata } from "@/util/metadata"
 
-export default function RootLayout({ children, className = '' }) {
-  const [theme, setTheme] = useState(null);
+export default function RootLayout({ children, className = "" }) {
+  const [theme, setTheme] = useState(null)
 
   useEffect(() => {
-    setTheme(localStorage.getItem('theme'));
-    const isDarkMode = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
+    setTheme(localStorage.getItem("theme"))
+    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
 
     // Si el tema no está establecido, utilizar la preferencia del sistema operativo
     if (!theme) {
-      setTheme(isDarkMode ? 'dark' : 'light');
+      setTheme(isDarkMode ? "dark" : "light")
     }
 
     // Escuchar los cambios en la preferencia del sistema operativo
 
     window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', () => {
-        setTheme(isDarkMode ? 'dark' : 'light');
-      });
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", () => {
+        setTheme(isDarkMode ? "dark" : "light")
+      })
 
     // Aplicar el tema
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark")
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark")
     }
-  }, [theme]);
+  }, [theme])
 
   return (
     <html lang="en">
@@ -51,5 +49,5 @@ export default function RootLayout({ children, className = '' }) {
         <Footer />
       </body>
     </html>
-  );
+  )
 }

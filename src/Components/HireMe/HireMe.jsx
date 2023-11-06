@@ -1,6 +1,6 @@
-import React from 'react';
-import { CircularText } from '../Icons/Icons';
-import Link from 'next/link';
+import React from "react"
+import { CircularText } from "../Icons/Icons"
+import Link from "next/link"
 
 export default function HireMe() {
   return (
@@ -10,7 +10,7 @@ export default function HireMe() {
     >
       <div className="w-56 h-auto flex items-center justify-center relative md:w-28">
         <CircularText
-          className={'fill-black animate-spin-slow dark:fill-white'}
+          className={"fill-black animate-spin-slow dark:fill-white"}
         />
 
         <Link
@@ -26,5 +26,5 @@ export default function HireMe() {
         </Link>
       </div>
     </div>
-  );
+  )
 }
