@@ -64,7 +64,7 @@ const About = () => {
                 3
               </span>
               <h2 className="text-xl font-medium capitalize text-gray-800 dark:text-gray-100 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                proyectos completados
+                Proyectos Completados
               </h2>
             </div>
             <div className="flex flex-col items-end justify-center xl:items-center">
@@ -72,7 +72,7 @@ const About = () => {
                 1
               </span>
               <h2 className="text-xl font-medium capitalize text-gray-800 dark:text-gray-100 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                años experiencia
+                Años Experiencia
               </h2>
             </div>
           </div>
