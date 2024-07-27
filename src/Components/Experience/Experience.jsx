@@ -67,19 +67,20 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="Desarrollador Front-End"
-            companyLink="https://desafiolatam.com/incubadora/"
-            company="Desafio Latam"
-            time="jun. 2023- sept. 2023"
-            work="Encargado de la optimización y actualización de la pagina web devsafio.com, empleando tecnologías como React-Next.js y Tailwind CSS. Experiencia en herramientas como Jira, Git y Figma para una gestión eficaz del proyecto."
+            position="Analista Programador"
+            companyLink="https://www.linkedin.com/company/nexiacl/"
+            company="NexIA"
+            time="may. 2024- presente"
+            work="Responsable aplicar ingeniería de software en el ámbito del desarrollo integral del mismo; considerando actividades de análisis, diseño, implementación y testing del mismo, con especialización en las tareas de programación de los códigos fuentes necesarios para dar
+completitud a las especificaciones de diseño definidas."
           />
 
           <Details
-            position="Desarrollador Front-End"
+            position="Ingeniero Software"
             companyLink="https://desafiolatam.com/incubadora/"
             company="Desafio Latam"
             time="jun. 2023- sept. 2023"
-            work="Encargado de la optimización y actualización de la pagina web devsafio.com, empleando tecnologías como React-Next.js y Tailwind CSS. Experiencia en herramientas como Jira, Git y Figma para una gestión eficaz del proyecto."
+            work="Encargado del desarrollo de demostraciones y software para la gestión inmobiliaria"
           />
           <Details
             position="Desarrollador Front-End"

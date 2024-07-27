@@ -146,6 +146,15 @@ function Projects() {
                 type="Proyecto"
               />
             </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                title="Sistema gestion Veterinaria"
+                img={apicrud}
+                link="https://github.com/patriciodunstan/GestionVeterinariaJava"
+                github="https://github.com/patriciodunstan/GestionVeterinariaJava"
+                type="Proyecto"
+              />
+            </div>
           </div>
         </div>
       </div>
