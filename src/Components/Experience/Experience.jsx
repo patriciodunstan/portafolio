@@ -77,8 +77,8 @@ completitud a las especificaciones de diseño definidas."
 
           <Details
             position="Ingeniero Software"
-            companyLink="https://desafiolatam.com/incubadora/"
-            company="Desafio Latam"
+            companyLink=""
+            company="AvantGarde Code"
             time="jun. 2023- sept. 2023"
             work="Encargado del desarrollo de demostraciones y software para la gestión inmobiliaria"
           />
