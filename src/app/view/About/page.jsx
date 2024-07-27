@@ -13,10 +13,10 @@ const About = () => {
     <>
       <TransitionEffect />
       <div className="flex items-center justify-center flex-col w-full dark:text-white">
-        <div className="pt-16">
+        <div className="pt-16 text-center">
           <AnimatedText
             text="Cada Día Mejor"
-            className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            className="mb-16 lg:!text-6xl sm:!text-4xl xs:!text-3xl sm:mb-8"
           />
         </div>
         <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
